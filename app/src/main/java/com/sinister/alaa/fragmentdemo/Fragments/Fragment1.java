@@ -19,6 +19,7 @@ public class Fragment1 extends Fragment {
     private Button btnNavFrag1;
     private Button btnNavFrag2;
     private Button btnNavFrag3;
+    private Button btnNavFrag4;
     private Button btnNavSecondActivity;
 
     @Nullable
@@ -28,6 +29,7 @@ public class Fragment1 extends Fragment {
         btnNavFrag1 = view.findViewById(R.id.btnNavFrag1);
         btnNavFrag2 = view.findViewById(R.id.btnNavFrag2);
         btnNavFrag3 = view.findViewById(R.id.btnNavFrag3);
+        btnNavFrag4 = view.findViewById(R.id.btnNavFrag4);
         btnNavSecondActivity = view.findViewById(R.id.btnNavSecondActivity);
 
         btnNavFrag1.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +56,13 @@ public class Fragment1 extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "Going to Fragment3.", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(2);
+            }
+        });
+        btnNavFrag4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Loading fragment within fragment1.", Toast.LENGTH_SHORT).show();
+                ((MainActivity)getActivity()).addFragment4();
             }
         });
         btnNavSecondActivity.setOnClickListener(new View.OnClickListener() {
