@@ -7,16 +7,29 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:layout_marginTop="500dp">
-    <!--<ImageView-->
-        <!--android:id="@+id/imageView"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--tools:layout_editor_absoluteX="16dp"-->
-        <!--tools:layout_editor_absoluteY="16dp"-->
-        <!--tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
-    <TextView
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rel_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="50dp"
-        android:text="Hello this is a test"/>
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <TextView
+            android:id="@+id/ImageViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/ImageView"
+            android:layout_alignTop="@id/ImageView"
+            android:layout_alignRight="@id/ImageView"
+            android:layout_alignBottom="@id/ImageView"
+            android:text="test"
+        android:gravity="center" />
+
+    </RelativeLayout>
+
 </LinearLayout>
